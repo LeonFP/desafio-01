@@ -38,4 +38,15 @@ server.put("/projects/:id", (request, response) => {
 
   return response.json(project);
 });
+
+// Deletar um projeto
+server.delete("/projects/:id", (request, response) => {
+  const { id } = request.params;
+
+  const index = projects.findIndex(p => p.id === id);
+  projects.splice(index, 1);
+
+  return response.send();
+});
+
 server.listen(3000);
