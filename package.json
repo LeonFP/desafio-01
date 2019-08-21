@@ -1,0 +1,14 @@
+{
+  "name": "desafio-01",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:LeonFP/desafio-01.git",
+  "author": "Leonardo Pinheiro <leo.pinnheiro@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
