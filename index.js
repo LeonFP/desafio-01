@@ -49,4 +49,14 @@ server.delete("/projects/:id", (request, response) => {
   return response.send();
 });
 
+// Incluir uma task
+server.post("/projects/:id/tasks", (request, response) => {
+  const { id } = request.params;
+  const { title } = request.body;
+  const project = projects.find(p => p.id === id);
+  project.tasks.push(title);
+
+  return response.json(project);
+});
+
 server.listen(3000);
